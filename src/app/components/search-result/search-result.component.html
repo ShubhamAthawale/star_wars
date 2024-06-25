@@ -1,0 +1,30 @@
+
+<div class="result_wrapper">
+    <h2>search results</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">sl no.</th>
+                <th scope="col">Character Name</th>
+                <th scope="col">Species</th>
+                <th scope="col">Birth Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let people of peopleDataToShow ; index as i">
+                <td>{{i+1}}</td>
+                <td><a href="" [routerLink]="['/characters/',people.id]" >{{people.name}}</a></td>
+                <td>{{people.speciesName == "unknown" ? '---' : people.speciesName}}</td>
+                <td>{{people.birth_year == "unknown" ? '---' : people.birth_year}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-end p-2">
+        <ngb-pagination [collectionSize]="collectionSize" [maxSize]="5" [ellipses]="true" [(page)]="page" [pageSize]="pageSize"
+            (pageChange)="refreshData()">
+        </ngb-pagination>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<app-loader *ngIf="isLoader"></app-loader>

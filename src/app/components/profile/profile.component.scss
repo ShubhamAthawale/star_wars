@@ -1,0 +1,107 @@
+.profile_wrapper{
+    display: flex;
+    gap: 3rem;
+    width: calc(100% - 3rem);
+    .left_section{
+        width: 20%;
+        background-color: white;
+        border-radius: 0.5rem;
+        height: calc(100vh - 111px);
+        overflow-y: auto;
+        .profile_avtar{
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            border-radius: 50%;
+            height: 140px;
+            overflow: hidden;
+            width: 140px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 25px;
+            background: #e6e6e6;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .content_wrap{
+            padding: 2rem;
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-top: 0.5rem;
+                    color:#777777;
+                    h6{
+                        font-size: 1.6rem;
+                        margin: 0;
+                        white-space: nowrap;
+                    }
+                    p{
+                        font-size: 1.6rem;
+                        margin: 0;
+                    }
+                    &.text-bold{
+                        font-weight: bold;
+                        h6{
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .right_section{
+        width: 80%;
+        background-color: white;
+        border-radius: 0.5rem;
+        height: calc(100vh - 111px);
+        overflow-y: auto;
+        h2{
+            color: #239b73;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin: 2rem 2rem 1.2rem 2rem;
+
+        }
+        .content_card{
+            background-color: #e6e6e6;
+            margin: 1rem 2rem 1.5rem 2rem;
+            color: #777777;
+            font-size: 1.6rem;
+            padding: 2rem;
+            border-radius: 2rem;
+            h5{
+                font-weight: bold;
+                font-size: 1.8rem;
+            }
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    margin-top: 0.5rem;
+                    color:#777777;
+                    h6{
+                        font-size: 1.6rem;
+                        margin: 0;
+                        white-space: nowrap;
+                    }
+                    p{
+                        font-size: 1.6rem;
+                        margin: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}

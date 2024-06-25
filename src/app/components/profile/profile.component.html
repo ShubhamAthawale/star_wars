@@ -1,0 +1,117 @@
+<div class="profile_wrapper">
+    <div class="left_section">
+        <div class="profile_avtar">
+            <img src="../../../assets/img/user.png" alt="avtar">
+        </div>
+        <div class="content_wrap">
+            <ul>
+                <li class="text-bold">
+                    <h6>Name:</h6>
+                    <p>{{profileeData.name}}</p>
+                </li>
+                <li>
+                    <h6>SkywalkerBorn:</h6>
+                    <p>{{profileeData.birth_year}}</p>
+                </li>
+                <li>
+                    <h6>Gender:</h6>
+                    <p>{{profileeData.gender}}</p>
+                </li>
+                <li>
+                    <h6>Height:</h6>
+                    <p>{{profileeData.height}}</p>
+                </li>
+                <li>
+                    <h6>Weight:</h6>
+                    <p>{{profileeData.mass}}</p>
+                </li>
+                <li>
+                    <h6>Created at:</h6>
+                    <p>{{profileeData.created | date:'dd/MM/yyyy'}}</p>
+                </li>
+                <li>
+                    <h6>Edited at:</h6>
+                    <p>{{profileeData.edited | date:'dd/MM/yyyy'}}</p>
+                </li>
+                <li>
+                    <h6>Hair Color:</h6>
+                    <p>{{profileeData.hair_color}}</p>
+                </li>
+                <li>
+                    <h6>Eye color:</h6>
+                    <p>{{profileeData.eye_color}}</p>
+                </li>
+                <li>
+                    <h6>Skin color:</h6>
+                    <p>{{profileeData.skin_color}}</p>
+                </li>
+                <!-- <li>
+                    <h6>Panet Name</h6>
+                    <p></p>
+                </li> -->
+                <li class="text-bold">
+                    <h6>Species:</h6>
+                    <p>{{profileeData.speciesName}}</p>
+                </li>
+              
+            </ul>
+           
+        </div>
+    </div>
+    <div class="right_section">
+        <h2>Films</h2>
+        <div class="content_card" *ngFor = "let movie of profileeData.filmDone">
+            <h5>{{movie.title}}</h5>
+            <ul>
+                <li>
+                    <h6>Director:</h6>
+                    <p>{{movie.director}}</p>
+                </li>
+                <li>
+                    <h6>Realese Date:</h6>
+                    <p>{{movie.release_date | date:'dd/MM/yyyy'}}</p>
+                </li>
+                <li>
+                    <h6>Producer:</h6>
+                    <p>{{movie.producer}}</p>
+                </li>
+            </ul>
+        </div>
+        <h2>Vehicles</h2>
+        <div class="content_card" *ngFor = "let vehical of profileeData.vehicalData">
+            <h5>{{vehical.name}}</h5>
+            <ul>
+                <li>
+                    <h6>Model:</h6>
+                    <p>{{vehical.model}}</p>
+                </li>
+                <li>
+                    <h6>Max atmosphering speed:</h6>
+                    <p>{{vehical.max_atmosphering_speed}}</p>
+                </li>
+                <li>
+                    <h6>Manufacturer:</h6>
+                    <p>{{vehical.manufacturer}}</p>
+                </li>
+            </ul>
+        </div>
+        <h2>Starships</h2>
+        <div class="content_card" *ngFor = "let starship of profileeData.starShipData">
+            <h5>{{starship.name}}</h5>
+            <ul>
+                <li>
+                    <h6>Model:</h6>
+                    <p>{{starship.model}}</p>
+                </li>
+                <li>
+                    <h6>Cost in credits:</h6>
+                    <p>{{starship.cost_in_credits}}</p>
+                </li>
+                <li>
+                    <h6>Manufacturer:</h6>
+                    <p>{{starship.manufacturer}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

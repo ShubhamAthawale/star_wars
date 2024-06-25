@@ -1,0 +1,71 @@
+.filter_wrapper{
+    h4{
+        color: #239b73;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 1rem 2rem 1.2rem 2rem;
+        text-align: center;
+    }
+    .filter_item_wrap{
+        padding: 0;
+        list-style: none;
+        .filter_item{
+            // margin-top: 1.5rem;
+            margin: 1.5rem ;
+            .accordion{
+                .accordion-button{
+                    background-color: #e6e6e6;
+                    color: #239b73;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    &:focus {
+                        box-shadow: unset;
+                    }
+                }
+                .accordion-body{
+                    padding: 0.8rem;
+                    background-color: #e6e6e6;
+                    ul{
+                        // list-style: ;
+                        padding: 0;
+                        list-style: none;
+                        li{
+                            background-color: white;
+                            display: flex;
+                            gap: 0.8rem;
+                            align-items: center;
+                            
+                            padding: 0.8rem 0.4rem 0.8rem 1rem;
+                            &:not(:first-child){
+                                margin: 0.8rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+    .btn_center{
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        .search_btn{
+            background: transparent;
+            border: 1px solid #239b73;
+            color: #239b73;
+            font-size: 1.6rem;
+            padding: 0.4rem 1.9rem;
+            font-weight: 500;
+            transition: all ease-in-out 0.3s;
+        
+            &:hover{
+                background: #239b73;
+                color: white;
+                border: 0.1rem solid #239b73;
+            }
+        }
+    }
+ 
+  
+}

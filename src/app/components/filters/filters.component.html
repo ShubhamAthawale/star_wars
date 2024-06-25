@@ -1,0 +1,107 @@
+<div class="filter_wrapper">
+  <h4>Filters</h4>
+  <form [formGroup] ="filterForm" (ngSubmit)="submitForm()">
+    <ul class="filter_item_wrap">
+      <li class="filter_item">
+        <div ngbAccordion>
+          <div ngbAccordionItem>
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton>Movie Name</button>
+            </h2>
+            <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ul *ngIf="!allFilms">
+                  <li *ngFor="let item of allFilms">
+                    <input (change)="handleCheckForMovie($event)" type="checkbox" [value]="item.title">
+                    <label
+                      for="{{item.title}}">{{item.title}}</label></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="filter_item">
+        <div ngbAccordion>
+          <div ngbAccordionItem>
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton>Species</button>
+            </h2>
+            <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ul *ngIf="!allSpecies">
+                  <li *ngFor="let item of allSpecies">
+                    <input (change)="handleCheckForSpecies($event)" type="checkbox" [value]="item">
+                    <label for="">{{item}}</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="filter_item">
+        <div ngbAccordion>
+          <div ngbAccordionItem>
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton>Vehicals</button>
+            </h2>
+            <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ul *ngIf="!allVehicals">
+                  <li *ngFor="let item of allVehicals">
+                    <input (change)="handleCheckForVehicals($event)" type="checkbox" [value]="item">
+                    <label  for="">{{item}}</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="filter_item">
+        <div ngbAccordion>
+          <div ngbAccordionItem>
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton>Star Ships</button>
+            </h2>
+            <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ul *ngIf="!allStarshipData">
+                  <li *ngFor="let item of allStarshipData">
+                    <input (change)="handleCheckForStarShips($event)" type="checkbox" [value]="item">
+                    <label for="">{{item}}</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="filter_item">
+        <div ngbAccordion>
+          <div ngbAccordionItem>
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton>Birt Year</button>
+            </h2>
+            <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ul *ngIf="!allBirthYearData">
+                  <li *ngFor="let item of allBirthYearData">
+                    <input (change)="handleCheckForBirtYear($event)" type="checkbox" [value]="item">
+                    <label  for="">{{item}}</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="btn_center">
+      <button class="btn search_btn" type="submit">Search</button>
+      <button class="btn search_btn" (click)= "resetFilter()" type="button">Reset</button>
+    </div>
+</form>
+
+</div>

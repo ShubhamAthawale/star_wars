@@ -1,0 +1,17 @@
+.header_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background-color: #239b73;
+    color: white;
+    padding: 2rem 3rem;
+    h1{
+        text-transform: uppercase;
+        margin: 0;
+    }
+    p{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin: 0;
+    }
+}
